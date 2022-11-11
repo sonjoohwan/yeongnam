@@ -1,0 +1,20 @@
+<Context> 
+<!-- MySQL용 
+8이하버전은 driverClassName="com.mysql.jdbc.Driver"을 사용하지만 
+8이상버전은 driverClassName="com.mysql.cj.jdbc.Driver"로 수정해서 사용해야한다.-->
+<Resource 
+   name="jdbc/ipc22bjsk" 
+   auth="Container"
+   type="javax.sql.DataSource"
+    
+   url="jdbc:mysql://118.131.179.138/ipc22bjsk" 
+   username="ipc22bjsk" 
+   password="ipc22bjsk"
+   driverClassName="com.mysql.cj.jdbc.Driver"
+   
+   factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+   
+   maxActive="500" 
+   maxWait="1000"
+   maxIdle="100"/> <!-- 교재 446페이지에 설명 있음 -->
+</Context>
